@@ -78,7 +78,7 @@ class App extends React.Component {
 function Display (props) {
   const output = props.output
   return (
-    <Card id="display" className="bg-light shadow text-center m-3">
+    <Card id="display" className="bg-light text-center m-3">
       <Card.Body className="p-2">{output}</Card.Body>
     </Card>
   )
@@ -115,8 +115,8 @@ function DrumPad (props) {
   const WAV = '.wav'
   return (
     <Button
-      block className="drum-pad shadow bg-warning" id={pad.name}
-      onClick={onClick} value={pad.name} variant="none"
+      block className="drum-pad" id={pad.name} onClick={onClick}
+      value={pad.name} variant="primary"
     >
       {pad.key}
       <audio className="clip" id={pad.key} src={PATH + pad.name + WAV}/>
