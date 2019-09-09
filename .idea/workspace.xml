@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0e2d1c3-7b70-48af-a59a-104a0804613c" name="Default Changelist" comment="" />
+    <list default="true" id="a0e2d1c3-7b70-48af-a59a-104a0804613c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +96,8 @@
       <workItem from="1565610471852" duration="68211000" />
       <workItem from="1565910936585" duration="3684000" />
       <workItem from="1566233584605" duration="1000000" />
+      <workItem from="1567570330531" duration="388000" />
+      <workItem from="1567972290397" duration="9821000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1565902447243</created>
@@ -114,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566234482459</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update eslint for vulnerability">
+      <created>1567570624156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567570624156</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +150,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Automatic update" />
     <MESSAGE value="Update styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update styles" />
+    <MESSAGE value="Update eslint for vulnerability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update eslint for vulnerability" />
   </component>
 </project>

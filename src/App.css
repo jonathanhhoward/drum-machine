@@ -1,5 +1,12 @@
-body {
-    background-color: lightgray;
-    max-width: 768px;
-    margin: auto;
+.h-33 {
+    height: 33.3%;
+}
+
+#display, .drum-pad {
+    font-size: 5vh;
+    color: white;
+}
+
+.center-vertical {
+    padding: 7vh 0;
 }
