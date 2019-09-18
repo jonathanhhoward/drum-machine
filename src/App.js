@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   playAudio = (audioElem) => {
-    audioElem.play()
+    audioElem.play().catch(err => console.log(err))
   }
 
   handleKeyDown = (event) => {
@@ -63,7 +63,7 @@ function Display (props) {
 
   return (
     <Container className="h-25 p-1" fluid>
-      <Card className="bg-info h-100 rounded-pill text-center" id="display">
+      <Card className="bg-info h-100 rounded-lg text-center" id="display">
         <Card.Body className="center-vertical">{output}</Card.Body>
       </Card>
     </Container>
@@ -100,8 +100,7 @@ function DrumSet (props) {
 }
 
 function DrumRow (props) {
-  const onClick = props.onClick
-  const cols = props.cols
+  const { cols, onClick } = props
 
   return (
     <Row className="h-33 m-0">
@@ -115,14 +114,13 @@ function DrumRow (props) {
 }
 
 function DrumPad (props) {
-  const onClick = props.onClick
-  const pad = props.pad
+  const { onClick, pad } = props
   const PATH = 'sounds/'
   const WAV = '.wav'
 
   return (
     <Button
-      block className="drum-pad h-100 p-0 rounded-pill" id={pad.name}
+      block className="drum-pad h-100 p-0 rounded-lg" id={pad.name}
       onClick={onClick} value={pad.name} variant="info"
     >
       {pad.key}
