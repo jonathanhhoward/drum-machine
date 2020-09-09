@@ -4,8 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-function DrumSet (props) {
-  const onClick = props.onClick
+function DrumSet ({ onClick }) {
   const drumSet = [
     [
       { key: 'Q', name: 'open-hat' },
