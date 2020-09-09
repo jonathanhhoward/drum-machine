@@ -1,8 +1,8 @@
 import React from 'react'
+import DrumPad from './DrumPad'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 
 function DrumSet (props) {
   const onClick = props.onClick
@@ -36,22 +36,6 @@ function DrumSet (props) {
         </Row>
       ))}
     </Container>
-  )
-}
-
-function DrumPad (props) {
-  const { onClick, pad } = props
-  const PATH = process.env.PUBLIC_URL + '/sounds/'
-  const WAV = '.wav'
-
-  return (
-    <Button
-      block className="drum-pad h-100 p-0 rounded-lg" id={pad.name}
-      onClick={onClick} value={pad.name} variant="info"
-    >
-      {pad.key}
-      <audio className="clip" id={pad.key} src={PATH + pad.name + WAV}/>
-    </Button>
   )
 }
 
