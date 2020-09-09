@@ -80,24 +80,16 @@ function DrumSet (props) {
 
   return (
     <Container className="h-75 p-0" fluid>
-      {drumSet.map(
-        (row, index) => <DrumRow cols={row} key={index} onClick={onClick}/>,
-      )}
+      {drumSet.map((row, rowIndex) => (
+        <Row className="h-33 m-0" key={rowIndex}>
+          {row.map((col, colIndex) => (
+            <Col className="p-1" key={colIndex}>
+              <DrumPad pad={col} onClick={onClick}/>
+            </Col>
+          ))}
+        </Row>
+      ))}
     </Container>
-  )
-}
-
-function DrumRow (props) {
-  const { cols, onClick } = props
-
-  return (
-    <Row className="h-33 m-0">
-      {cols.map(
-        col => <Col className="p-1" key={col.key}>
-          <DrumPad onClick={onClick} pad={col}/>
-        </Col>,
-      )}
-    </Row>
   )
 }
 
