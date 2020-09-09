@@ -115,7 +115,7 @@ function DrumRow (props) {
 
 function DrumPad (props) {
   const { onClick, pad } = props
-  const PATH = 'sounds/'
+  const PATH = process.env.PUBLIC_URL + '/sounds/'
   const WAV = '.wav'
 
   return (
