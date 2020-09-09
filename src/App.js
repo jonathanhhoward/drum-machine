@@ -51,14 +51,14 @@ class App extends React.Component {
 
     return (
       <Container className="bg-dark m-0 p-1 vh-100" fluid id="drum-machine">
-        <Display output={output}/>
+        <DrumDisplay output={output}/>
         <DrumSet onClick={handleClick}/>
       </Container>
     )
   }
 }
 
-function Display (props) {
+function DrumDisplay (props) {
   const output = props.output
 
   return (
