@@ -1,25 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import DrumDisplay from './components/DrumDisplay'
 import DrumSet from './components/DrumSet'
 import Container from 'react-bootstrap/Container'
 import './App.css'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
+function App () {
+  const [output, setOutput] = useState('select pad')
 
-    this.state = { output: 'select pad' }
-  }
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
 
-  componentDidMount () {
-    document.addEventListener('keydown', this.handleKeyDown)
-  }
-
-  componentWillUnmount () {
-    document.removeEventListener('keydown', this.handleKeyDown)
-  }
-
-  handleKeyDown = ({ key }) => {
+  function handleKeyDown ({ key }) {
     const KEY = key.toUpperCase()
 
     if (!['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'].includes(KEY))
@@ -27,24 +20,22 @@ class App extends React.Component {
 
     const audioElem = document.getElementById(KEY)
     const button = audioElem.closest('.drum-pad')
-    this.setState({ output: button.value })
+    setOutput(button.value)
     audioElem.play()
   }
 
-  handleClick = ({ target: button }) => {
+  function handleClick ({ target: button }) {
     const audioElem = button.querySelector('.clip')
-    this.setState({ output: button.value })
+    setOutput(button.value)
     audioElem.play()
   }
 
-  render () {
-    return (
-      <Container className="bg-dark m-0 p-1 vh-100" fluid id="drum-machine">
-        <DrumDisplay output={this.state.output}/>
-        <DrumSet onClick={this.handleClick}/>
-      </Container>
-    )
-  }
+  return (
+    <Container className="bg-dark m-0 p-1 vh-100" fluid id="drum-machine">
+      <DrumDisplay output={output}/>
+      <DrumSet onClick={handleClick}/>
+    </Container>
+  )
 }
 
 export default App
