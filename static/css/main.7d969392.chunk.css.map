@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,MACI,YACJ,CAEA,mBACI,aAAc,CACd,UACJ,CAEA,iBACI,aACJ","file":"main.7d969392.chunk.css","sourcesContent":[".h-33 {\r\n    height: 33.3%;\r\n}\r\n\r\n#display, .drum-pad {\r\n    font-size: 5vh;\r\n    color: white;\r\n}\r\n\r\n.center-vertical {\r\n    padding: 7vh 0;\r\n}\r\n"]}
