@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,MACE,YACF,CAEA,mBAEE,aAAc,CACd,UACF,CAEA,iBACE,aACF","file":"main.4afb2a7f.chunk.css","sourcesContent":[".h-33 {\n  height: 33.3%;\n}\n\n#display,\n.drum-pad {\n  font-size: 5vh;\n  color: white;\n}\n\n.center-vertical {\n  padding: 7vh 0;\n}\n"]}
