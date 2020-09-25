@@ -1,12 +1,13 @@
 .h-33 {
-    height: 33.3%;
+  height: 33.3%;
 }
 
-#display, .drum-pad {
-    font-size: 5vh;
-    color: white;
+#display,
+.drum-pad {
+  font-size: 5vh;
+  color: white;
 }
 
 .center-vertical {
-    padding: 7vh 0;
+  padding: 7vh 0;
 }

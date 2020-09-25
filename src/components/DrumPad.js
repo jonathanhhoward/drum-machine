@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button'
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-function DrumPad ({ pad, onClick }) {
+function DrumPad({ pad, onClick }) {
   return (
     <Button
       block
@@ -18,7 +18,7 @@ function DrumPad ({ pad, onClick }) {
         src={`${process.env.PUBLIC_URL}/sounds/${pad.name}.wav`}
       />
     </Button>
-  )
+  );
 }
 
-export default DrumPad
+export default DrumPad;
